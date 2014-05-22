@@ -4,7 +4,12 @@
 
 A calculator element with build in calculator functionality.
 
-#### usage
+## install
+
+    $ component install
+    $ component build
+
+## usage
 
 Create a calculator element and append it to the body:
 
