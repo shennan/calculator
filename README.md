@@ -2,7 +2,7 @@
 
 # calculator
 
-A calculator element with built in calculator functionality.
+It looks like a calculator and acts like a calculator.
 
 ## install
 
