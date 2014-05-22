@@ -1,4 +1,6 @@
-## calculator
+![logo](calculator.png?raw=true)
+
+# calculator
 
 A calculator element with build in calculator functionality.
 
