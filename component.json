@@ -1,0 +1,40 @@
+{
+  "name": "calculator",
+  "description": "It looks like a calculator and acts like a calculator.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/emitter": "*"
+  },
+  "remotes":[
+    "https://raw.githubusercontent.com"
+  ],
+  "development": {},
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "files":[
+    "lib/imgs/symbol-0001.png",
+    "lib/imgs/symbol-0002.png",
+    "lib/imgs/symbol-0003.png",
+    "lib/imgs/symbol-0004.png",
+    "lib/imgs/symbol-0005.png",
+    "lib/imgs/symbol-0006.png",
+    "lib/imgs/symbol-0007.png",
+    "lib/imgs/symbol-0008.png",
+    "lib/imgs/symbol-0009.png",
+    "lib/imgs/symbol-0010.png",
+    "lib/imgs/symbol-0011.png",
+    "lib/imgs/symbol-0012.png",
+    "lib/imgs/symbol-0013.png",
+    "lib/imgs/symbol-0014.png",
+    "lib/imgs/symbol-0015.png",
+    "lib/imgs/symbol-0016.png",
+    "lib/imgs/symbol-0017.png",
+    "lib/imgs/symbol-0018.png"
+  ],
+  "styles": [
+    "lib/css/calculator.css"
+  ]
+}
