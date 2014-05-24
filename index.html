@@ -56,7 +56,7 @@
 
 		var calculator = require("calculator");
 
-		var calc = calculator();
+		var calc = calculator(undefined, undefined, 'build/calculator/lib');
 
 		calc.on('button pressed', function(result){ console.log(result); });
 		calc.on('confirm pressed', function(result){ console.log(result); });

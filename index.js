@@ -79,15 +79,17 @@ var class_names = {
 
 }
 
-module.exports = function(buttons, show_display){
+module.exports = function(buttons, show_display, lib){
 
 	show_display = typeof show_display === 'boolean' ? show_display : true;
 
-	return new Calculator(buttons || default_buttons, show_display);
+	lib = typeof lib === 'string' ? lib : 'build/shennan-calculator/lib';
+
+	return new Calculator(buttons || default_buttons, show_display, lib);
 
 }
 
-function Calculator(buttons, show_display, max_decimals){
+function Calculator(buttons, show_display, lib){
 
 	var n1 = '';
 	var n2 = '';
@@ -337,7 +339,7 @@ function Calculator(buttons, show_display, max_decimals){
 
 		var button = create_element('img', classes);
 
-		button.src = 'build/shennan-calculator/lib/imgs/' + icon;
+		button.src = lib + '/imgs/' + icon;
 
 		button.draggable = false;
 		button.ondragstart = function(){ return false; }
