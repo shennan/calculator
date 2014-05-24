@@ -88,13 +88,12 @@ var default_config = {
 
 }
 
-module.exports = function(buttons, options){
+module.exports = function(buttons, config){
 
-	var config = new default_config;
-	console.log(config);
-	for(var i in options){
+	for(var i in default_config){
 
-		config[i] = options[i]
+		if(typeof config[i] === 'undefined')
+			config[i] = default_config[i];
 
 	}
 
