@@ -90,6 +90,8 @@ var default_config = {
 
 module.exports = function(buttons, config){
 
+	config = config || {};
+
 	for(var i in default_config){
 
 		if(typeof config[i] === 'undefined')
