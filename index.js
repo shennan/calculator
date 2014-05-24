@@ -168,7 +168,7 @@ function Calculator(buttons, show_display, max_decimals){
 
 		render();
 
-		calc.emit('confirm pressed', get_current_number());
+		calc.emit('confirm', get_current_number());
 
 	}
 
@@ -181,7 +181,7 @@ function Calculator(buttons, show_display, max_decimals){
 
 		render();
 
-		calc.emit('clear pressed');
+		calc.emit('clear');
 
 	}
 
@@ -216,7 +216,7 @@ function Calculator(buttons, show_display, max_decimals){
 
 		render();
 
-		calc.emit('button pressed', get_current_number());
+		calc.emit('button', get_current_number());
 
 	}
 
@@ -337,7 +337,7 @@ function Calculator(buttons, show_display, max_decimals){
 
 		var button = create_element('img', classes);
 
-		button.src = 'build/calculator/lib/imgs/' + icon;
+		button.src = 'build/shennan-calculator/lib/imgs/' + icon;
 
 		button.draggable = false;
 		button.ondragstart = function(){ return false; }
