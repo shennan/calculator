@@ -79,17 +79,30 @@ var class_names = {
 
 }
 
-module.exports = function(buttons, show_display, lib){
+var default_config = {
 
-	show_display = typeof show_display === 'boolean' ? show_display : true;
-
-	lib = typeof lib === 'string' ? lib : 'build/shennan-calculator/lib';
-
-	return new Calculator(buttons || default_buttons, show_display, lib);
+	display:true,
+	decimals:2,
+	integers:10,
+	lib:'build/shennan-calculator/lib'
 
 }
 
-function Calculator(buttons, show_display, lib){
+module.exports = function(buttons, options){
+
+	var config = new default_config;
+	console.log(config);
+	for(var i in options){
+
+		config[i] = options[i]
+
+	}
+
+	return new Calculator(buttons || default_buttons, config);
+
+}
+
+function Calculator(buttons, config){
 
 	var n1 = '';
 	var n2 = '';
@@ -99,7 +112,7 @@ function Calculator(buttons, show_display, lib){
 
 	var calc = emitter( create_element('div', 'calculator') );
 
-	var row_height = show_display ? 90 / (buttons.length + 1) : 90 / buttons.length;
+	var row_height = config.display ? 90 / (buttons.length + 1) : 90 / buttons.length;
 
 	var display_row = create_element('div', 'row');
 
@@ -109,7 +122,7 @@ function Calculator(buttons, show_display, lib){
 
 	var display_inner = display.appendChild( create_element('div', 'inner') );
 
-	if(show_display){
+	if(config.display){
 
 		calc.appendChild( display_row );
 
@@ -248,7 +261,7 @@ function Calculator(buttons, show_display, lib){
 
 		}
 		
-		n1 = String(round(nn1, 2));
+		n1 = String(round(nn1, config.decimals));
 
 	}
 
@@ -339,7 +352,7 @@ function Calculator(buttons, show_display, lib){
 
 		var button = create_element('img', classes);
 
-		button.src = lib + '/imgs/' + icon;
+		button.src = config.lib + '/imgs/' + icon;
 
 		button.draggable = false;
 		button.ondragstart = function(){ return false; }

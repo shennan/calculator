@@ -9,6 +9,12 @@
 
 }
 
+.calculator .row{
+
+	overflow: hidden;
+
+}
+
 .calculator .row, .calculator .row .cell{
 
 	position: relative;
