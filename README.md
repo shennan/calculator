@@ -74,9 +74,15 @@ Here are the possible button mappings:
     '_t' > /* tick */
     '__' > /* blank */
 
-If you don't want to see the calculator display, pass `false` as the second argument:
+Add various options as the second argument:
 
-    var calc = calculator(undefined, false);
+    var calc = calculator(undefined,
+        {
+            display:true,                       /* whether to show the calculator display or not */
+            decimals:2,                         /* the maximum number of decimal places to show */
+            lib:'build/shennan-component/lib'   /* the path to the lib folder for the required assets */
+        }
+    );
 
 Each button gets given a class name, so targetting individual buttons in CSS is easy:
 
