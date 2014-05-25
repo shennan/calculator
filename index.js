@@ -113,6 +113,8 @@ function Calculator(buttons, config){
 
 	var calc = emitter( create_element('div', 'calculator') );
 
+	calc.clear = clear_pressed;
+
 	var row_height = config.display ? 90 / (buttons.length + 1) : 90 / buttons.length;
 
 	var display_row = create_element('div', 'row');
