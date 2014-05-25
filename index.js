@@ -190,10 +190,10 @@ function Calculator(buttons, config){
 
 	function clear_pressed(e){
 
-		var n1 = '';
-		var n2 = '';
-		var operator = undefined;
-		var operator_active = undefined;
+		n1 = '';
+		n2 = '';
+		operator = undefined;
+		operator_active = undefined;
 
 		render();
 
