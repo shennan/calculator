@@ -113,8 +113,6 @@ function Calculator(buttons, config){
 
 	var calc = emitter( create_element('div', 'calculator') );
 
-	calc.clear = clear_pressed;
-
 	var row_height = config.display ? 90 / (buttons.length + 1) : 90 / buttons.length;
 
 	var display_row = create_element('div', 'row');
@@ -178,6 +176,22 @@ function Calculator(buttons, config){
 			row.appendChild(cell);
 
 		}
+	}
+
+	calc.clear = function(emit){
+
+		emit = typeof emit === ' boolean' ? emit : true;
+
+		n1 = '';
+		n2 = '';
+		operator = undefined;
+		operator_active = undefined;
+
+		render();
+
+		if(emit)
+			calc.emit('clear');
+		
 	}
 
 	function confirm_pressed(e){
