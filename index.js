@@ -180,7 +180,7 @@ function Calculator(buttons, config){
 
 	calc.clear = function(emit){
 
-		emit = typeof emit === ' boolean' ? emit : true;
+		emit = typeof emit === 'boolean' ? emit : true;
 
 		n1 = '';
 		n2 = '';
