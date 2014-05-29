@@ -37,6 +37,7 @@
 	height: 90%;
 
 	top:5%;
+	left:0;
 
 	display: table;
 	font-size: 2em;
@@ -64,6 +65,7 @@
 	height:90%;
 
 	top:5%;
+	left:0;
 
 }
 
@@ -88,6 +90,9 @@
 .calculator .row .cell img.button{
 
 	position: relative;
+
+	top:0;
+	left:0;
 
 	width:auto;
 	height:auto;
