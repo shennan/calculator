@@ -219,7 +219,7 @@ function Calculator(buttons, config){
 
 	function button_pressed(e){
 
-		var button = e.currentTarget;
+		var button = typeof e !== 'undefined' ? e.currentTarget : this;
 
 		var symbol = button.getAttribute('data-symbol');
 
