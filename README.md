@@ -21,19 +21,19 @@ Create a calculator element and append it to the body:
 
 Listen for events:
 
-    calc.on('button pressed', function(number){
+    calc.on('button', function(number){
 
       console.log('current number is: ' + number);
 
     });
 
-    calc.on('confirm pressed', function(number){
+    calc.on('confirm', function(number){
 
       console.log('tick or equals button pressed, resulting number is: ' + number);
 
     });
 
-    calc.on('clear pressed', function(){
+    calc.on('clear', function(){
 
       console.log('clear has been pressed and we can assume that the resulting number is 0');
 
