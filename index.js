@@ -273,7 +273,7 @@ function Calculator(buttons, config){
 
 		render();
 
-		calc.emit('button', get_current_number());
+		calc.emit('button', get_current_number(), e);
 
 	}
 
