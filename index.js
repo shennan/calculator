@@ -194,6 +194,16 @@ function Calculator(buttons, config){
 		
 	}
 
+	calc.update = function(pn1, poperator, pn2){
+
+		n1 = pn1 || '';
+		n2 = pn2 || '';
+		operator = poperator || undefined
+		operator_active = undefined;
+
+		render();
+	}
+
 	function confirm_pressed(e){
 
 		equals();
