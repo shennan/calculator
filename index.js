@@ -225,7 +225,7 @@ function Calculator(buttons, config){
 
 		render();
 
-		calc.emit('confirm', get_current_number());
+		calc.emit('confirm', get_current_number(), e);
 
 	}
 
@@ -238,7 +238,7 @@ function Calculator(buttons, config){
 
 		render();
 
-		calc.emit('clear');
+		calc.emit('clear', e);
 
 	}
 
