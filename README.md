@@ -24,19 +24,19 @@ Create a calculator element and append it to the body:
 Listen for events:
 
 ```js
-    calc.on('button', function(number){
+    calc.on('button', function(number, event){
 
       console.log('current number is: ' + number);
 
     });
 
-    calc.on('confirm', function(number){
+    calc.on('confirm', function(number, event){
 
       console.log('tick or equals button pressed, resulting number is: ' + number);
 
     });
 
-    calc.on('clear', function(){
+    calc.on('clear', function(event){
 
       console.log('clear has been pressed and we can assume that the resulting number is 0');
 
@@ -158,15 +158,15 @@ Reset the sum and update the current display (part 1) to the given value
 
 ## events
 
-### `calc.on('button', function(num){})`
+### `calc.on('button', function(num, event){})`
 
 called when a button is pressed with the current number
 
-### `calc.on('confirm', function(num){})`
+### `calc.on('confirm', function(num, event){})`
 
 called when the equals or close button is pressed - passed the current number
 
-### `calc.on('clear', function(num){})`
+### `calc.on('clear', function(event){})`
 
 called when the display is reset
 
