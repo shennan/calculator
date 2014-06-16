@@ -194,29 +194,29 @@ function Calculator(buttons, config){
 		
 	}
 
-	calc.setValue = function(value){
+	calc.value = function(value){
 
-		n1 = value || '';
-		n2 = '';
-		operator = undefined
-		operator_active = undefined
+		if(arguments.length<=0){
+			var num = get_current_number_string()
 
-		render();
-	}
+			num = parseFloat(num)
 
-	calc.getValue = function(){
-
-		var num = get_current_number_string()
-
-		num = parseFloat(num)
-
-		if(isNaN(num)){
-			return 0
+			if(isNaN(num)){
+				return 0
+			}
+			else{
+				return num
+			} 
 		}
 		else{
-			return num
+			n1 = value || '';
+			n2 = '';
+			operator = undefined
+			operator_active = undefined
+
+			render();	
 		}
-		
+
 	}
 
 	function confirm_pressed(e){

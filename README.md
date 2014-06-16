@@ -148,13 +148,9 @@ var buttons =
 
 Clear the display of the calculator
 
-### `calc.getValue(val)`
+### `calc.value(val)`
 
-Get a numeric representation of the current display
-
-### `calc.setValue(val)`
-
-Reset the sum and update the current display (part 1) to the given value
+Get a numeric representation of the current display or set the value if an argument is passed
 
 ## events
 
