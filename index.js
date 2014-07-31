@@ -160,15 +160,15 @@ function Calculator(buttons, config){
 
 				if(symbol === '_e' || symbol === '_t'){
 
-					button.onclick = confirm_pressed;
+					button.onclick = button.ontouchend = confirm_pressed;
 
 				}else if(symbol === '_c'){
 
-					button.onclick = clear_pressed;
+					button.onclick = button.ontouchend = clear_pressed;
 
 				}else{
 
-					button.onclick = button_pressed;
+					button.onclick = button.ontouchend = button_pressed;
 
 				}
 			}
@@ -196,6 +196,8 @@ function Calculator(buttons, config){
 
 	function confirm_pressed(e){
 
+		e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
 		equals();
 
 		render();
@@ -205,6 +207,8 @@ function Calculator(buttons, config){
 	}
 
 	function clear_pressed(e){
+
+		e.preventDefault ? e.preventDefault() : e.returnValue = false;
 
 		n1 = '';
 		n2 = '';
@@ -218,6 +222,8 @@ function Calculator(buttons, config){
 	}
 
 	function button_pressed(e){
+
+		e.preventDefault ? e.preventDefault() : e.returnValue = false;
 
 		var button = typeof e !== 'undefined' ? e.currentTarget : this;
 
