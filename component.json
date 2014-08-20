@@ -37,5 +37,8 @@
   ],
   "styles": [
     "lib/css/calculator.css"
+  ],
+  "remotes":[
+    "https://raw.githubusercontent.com"
   ]
 }

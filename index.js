@@ -194,6 +194,31 @@ function Calculator(buttons, config){
 		
 	}
 
+	calc.value = function(value){
+
+		if(arguments.length<=0){
+			var num = get_current_number_string()
+
+			num = parseFloat(num)
+
+			if(isNaN(num)){
+				return 0
+			}
+			else{
+				return num
+			} 
+		}
+		else{
+			n1 = value || '';
+			n2 = '';
+			operator = undefined
+			operator_active = undefined
+
+			render();	
+		}
+
+	}
+
 	function confirm_pressed(e){
 
 		e.preventDefault ? e.preventDefault() : e.returnValue = false;
@@ -202,7 +227,7 @@ function Calculator(buttons, config){
 
 		render();
 
-		calc.emit('confirm', get_current_number());
+		calc.emit('confirm', get_current_number(), e);
 
 	}
 
@@ -217,7 +242,7 @@ function Calculator(buttons, config){
 
 		render();
 
-		calc.emit('clear');
+		calc.emit('clear', e);
 
 	}
 
@@ -254,7 +279,7 @@ function Calculator(buttons, config){
 
 		render();
 
-		calc.emit('button', get_current_number());
+		calc.emit('button', get_current_number(), e);
 
 	}
 
