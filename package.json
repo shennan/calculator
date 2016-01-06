@@ -1,0 +1,25 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "It looks like a calculator and acts like a calculator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shennan/calculator.git"
+  },
+  "keywords": [
+    "calculator",
+    "maths",
+    "input",
+    "interface"
+  ],
+  "author": "shennan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shennan/calculator/issues"
+  },
+  "homepage": "https://github.com/shennan/calculator"
+}
